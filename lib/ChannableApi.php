@@ -110,11 +110,14 @@ class ChannableApi
     /**
      * @return array
      */
-    public function getOrders(): array
+    public function getOrders(array $params = []): array
     {
         $orders = [];
 
-        foreach (json_decode($this->query('orders?limit=100'))->orders as $order) {
+        $params = array_merge(['limit' => 100], $params);
+        $queryString = http_build_query($params);
+
+        foreach (json_decode($this->query('orders?' . $queryString))->orders as $order) {
             $products = [];
 
             foreach ($order->data->products as $product) {

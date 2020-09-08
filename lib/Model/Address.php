@@ -117,7 +117,7 @@ class Address
     /**
      * @return string
      */
-    public function getMiddleName(): string
+    public function getMiddleName(): ?string
     {
         return $this->middleName;
     }
