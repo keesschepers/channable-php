@@ -76,7 +76,7 @@ class Address
 
     public function __construct(
         string $firstName,
-        string $middleName,
+        ?string $middleName,
         string $lastName,
         string $company,
         string $email,
