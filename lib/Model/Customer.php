@@ -48,7 +48,7 @@ class Customer
         string $company,
         string $phone,
         string $firstName,
-        string $middleName,
+        ?string $middleName,
         string $lastName,
         string $gender,
         string $email,
