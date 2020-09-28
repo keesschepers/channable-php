@@ -47,7 +47,7 @@ class Customer
     public function __construct(
         string $company,
         string $phone,
-        string $firstName,
+        ?string $firstName,
         ?string $middleName,
         string $lastName,
         string $gender,
